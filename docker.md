@@ -9,3 +9,26 @@ Run a container and show output: `docker container run ubuntu`
 Run a container in interactive mode: `docker container run -it ubuntu`
 
 Run a container in detached mode: `docker container run -d ubuntu`
+
+## Dockerfile
+
+Build a Dockerfile:
+
+```bash
+# In the Dockerfile directory
+docker build . -t <image_name>
+```
+
+Example:
+
+```Dockerfile
+FROM microsoft/dotnet:sdk AS build
+COPY src /app
+WORKDIR /app
+RUN dotnet build -c Release
+
+FROM microsoft/dotnet
+COPY --from=build /app/bin/Release/netcoreapp2.2 /app
+WORKDIR /app
+ENTRYPOINT ["dotnet", "FilesApi.dll"]
+```
