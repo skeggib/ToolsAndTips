@@ -2,13 +2,15 @@
 
 ## Containers
 
-Pull a container: `docker container pull ubuntu`
+Pull a container: `docker container pull <image>`
 
-Run a container and show output: `docker container run ubuntu`
+Run a container and show output: `docker container run <image>`
 
-Run a container in interactive mode: `docker container run -it ubuntu`
+Run a container in interactive mode: `docker container run -it <image>`
 
-Run a container in detached mode: `docker container run -d ubuntu`
+Run a container in detached mode: `docker container run -d <image>`
+
+Bash on a running container: `docker exec -it <container> bash`
 
 ## Dockerfile
 
