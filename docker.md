@@ -34,3 +34,23 @@ COPY --from=build /app/bin/Release/netcoreapp2.2 /app
 WORKDIR /app
 ENTRYPOINT ["dotnet", "FilesApi.dll"]
 ```
+
+## docker-compose
+
+`docker-compose.yml`
+
+Example:
+
+```yml
+version: "3"
+
+services:
+  filesapi:
+    image: filesapi
+  converterapi:
+    image: converterapi
+  notesapi:
+    image: notesapi
+    ports:
+      - "5000:80"
+```
