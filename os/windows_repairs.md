@@ -26,3 +26,14 @@ bcdboot C:\windows /s Z: /f UEFI /v  # /s for mountpoint
 
 exit
 ```
+
+## Restore the MBR
+
+For example after a Linux uninstall.
+
+```
+bootrec /fixmbr
+```
+
+[https://fr.wikipedia.org/wiki/Master_boot_record#Microsoft_Windows]()
+
