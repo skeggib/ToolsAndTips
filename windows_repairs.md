@@ -37,3 +37,6 @@ bootrec /fixmbr
 
 [https://fr.wikipedia.org/wiki/Master_boot_record#Microsoft_Windows]()
 
+## Surface Laptop 3 configuration
+
+[How to Disable Adaptive Contrast on Surface Laptop 3 (AMD)](https://www.reddit.com/r/Amd/comments/dw3fyp/how_to_disable_adaptive_contrast_on_surface/)
