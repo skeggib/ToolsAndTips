@@ -70,3 +70,14 @@ services:
 11. [Container Port Mapping](https://gist.github.com/remilapeyre/11f4084ce9ffb11966099c165d18c1e6)
 12. [Starting a Compose App](https://gist.github.com/remilapeyre/584a901a680cc7caada5510292899087)
 13. [Scaling a Compose App](https://gist.github.com/remilapeyre/feae3487329802d424e320a37c7e185c)
+
+# Other
+
+Docker Windows desktop VM time drifting workaround:
+
+https://github.com/docker/for-win/issues/5131
+
+```
+Disable-VMIntegrationService -VMName DockerDesktopVM -Name "Time Synchronization"
+Enable-VMIntegrationService -VMName DockerDesktopVM -Name "Time Synchronization"
+```
